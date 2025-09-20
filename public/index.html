@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  </head>
+  
+  <body>
+    <div class="login-container">
+    <h1 class="title is-1">Log In</h1>
+    <div class="login-form"> 
+      <form id="login-form" action='/login' method='POST'>
+        <div class="field">
+          <label class="label is-medium">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-primary is-medium" type="text" placeholder="Username" name="username">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label is-medium">Password</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-primary is-medium" type="password" placeholder="Password" name="password">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control checkbox-wrapper">
+            <label class="checkbox is-medium">
+              <input class="is-medium" type="checkbox" name="doCreateUser">
+              Create new user if not existing
+            </label>
+          </div>
+        </div>
+
+        <p id="error-message" class="has-text-danger" style="display: none;"> </p>
+
+        <div class="field" style="margin-top: 50px;">
+          <div class="control">
+            <button class="button is-primary is-medium" type="submit">Submit</button>
+          </div>
+        </div>
+
+      </form>    
+    </div>
+    </div>
+  </body>
+</html>

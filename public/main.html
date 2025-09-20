@@ -1,0 +1,127 @@
+
+<!-- https://dev.to/m_josh/build-a-jwt-login-and-logout-system-using-expressjs-nodejs-hd2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="welcome-messages">
+      <p id="new-user-message" class="has-text-primary has-text-weight-extrabold" style="display: none;"> </p>
+      <p id="welcome-message" class="has-text-primary has-text-weight-extrabold" style="display: none;"> </p>
+      <p id="error-message" class="has-text-danger has-text-weight-extrabold" style="display: none;"> </p>
+    </div>
+    <div class="tracker-container">
+      <div class="left-boxes">
+
+        <!-- Entry section -->
+        <div class="card" id="tracker-entry" style="display: block;">
+          <div class="card-content">
+            <p class="card-header-title">Movie Rating Entry</p>
+            <form class="form-inputs" id="inputForm">
+              <div class="form-inputs">
+                <label for="name">Enter your movie name here: </label>
+                <!-- <textarea class="textarea is-primary" placeholder="Movie Name" id="name" required
+                ></textarea> -->
+                <input class="input is-primary is-small" type="text" id="name" placeholder="Movie Name" required>
+              </div>
+              <div class="form-inputs">
+                <label for="year">Enter your movie release year here: </label>
+                <input class="number-input input is-primary is-small" placeholder="1900" type="number" id="year" min="1900" max="2025" required>
+              </div>
+                <label for="plotRating">Enter your movie plot rating (0-10) here: </label>
+                <input class="number-input input is-primary is-small" placeholder="10" type="number" id="plotRating" min="0" max="10" required>
+              <div class="form-inputs">
+                <label for="actingRating">Enter your movie acting rating (0-10) here: </label>
+                <input class="number-input input is-primary is-small" placeholder="10" type="number" id="actingRating" min="0" max="10" required>
+              </div>
+              <div class="form-inputs">
+                <label for="musicRating">Enter your movie music rating (0-10) here: </label>
+                <input class="number-input input is-primary is-small" placeholder="10" type="number" id="musicRating" min="0" max="10" required>
+              </div>
+              <div class="form-submit">
+                <button class="button is-primary is-small" id="form-submit">Submit Rating</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Edit section -->
+        <div class="card" id="tracker-edit" style="display: none;">
+          <div class="card-content">
+            <h3 class="card-header-title" style="margin-top: 20px;"> Edit Section </h3>
+            <table>
+              <thead>
+                  <tr style="font-size: 22px;">
+                      <th>Name</th>
+                      <th>Year</th>
+                      <th>Plot Rating</th>
+                      <th>Acting Rating</th>
+                      <th>Music Rating</th>
+                  </tr>
+              </thead>
+              <tbody style="font-size: 18px;">
+                <tr>
+                  <td id="edit-name"> Movie Name </td>
+                  <td id="edit-year"> Movie Year </td>
+                  <td id="edit-plotRating"> 
+                    <input style="width: 60px; height: 20px;" type="number" id="edit-plot" min="0" max="10" required> 
+                  </td>
+                  <td id="edit-actingRating">
+                    <input style="width: 60px; height: 20px;" type="number" id="edit-acting" min="0" max="10" required> 
+                  </td>
+                  <td id="edit-musicRating"> 
+                    <input style="width: 60px; height: 20px;" type="number" id="edit-music" min="0" max="10" required> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-end; gap: 50px;">
+              <button class="button is-primary" id="edit-submit">
+                Submit Edits
+              </button>            
+              <button class="button is-primary" id="edit-cancel"> 
+                Cancel editing </button>
+            </div>
+        </div>
+      </div>  
+      </div>  
+
+      <div class="card" id="tracker-results">
+        <div class="card-content">
+          <div style="display: flex; flex-direction: row; justify-content: center;">
+            <h3 class="card-header-title"> Movie Rating Results </h3>
+            <button id="results-request" class="button is-primary"> See Results </button>
+          </div>
+          <table>
+              <thead>
+                  <tr style="font-size: 22px;">
+                      <th>Name</th>
+                      <th>Year</th>
+                      <th>Plot Rating</th>
+                      <th>Acting Rating</th>
+                      <th>Music Rating</th>
+                      <th>Overall Rating</th>
+                  </tr>
+              </thead>
+              <tbody id="movie-table-body">
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
