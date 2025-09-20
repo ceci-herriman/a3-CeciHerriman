@@ -7,7 +7,7 @@
     "start": "node server.improved.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
     "cookie-session": "^2.1.1",
