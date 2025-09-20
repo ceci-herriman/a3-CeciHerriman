@@ -15,23 +15,23 @@
   align-items: center;
 }
 
-input[type="checkbox"]:focus, button:focus, input:focus {
+button:focus, input:focus {
   outline: none !important;
   box-shadow: none !important;
-  border: 3px solid white !important;   
+  border: 3px solid black !important;   
 }
 
-input[type="checkbox"]:hover, button:hover, input:hover {
-  border: 3px solid white !important;   
+button:hover, input:hover {
+  border: 3px solid black !important;
 }
 
 .checkbox-wrapper:focus-within {
-  border: 3px solid white;
+  border: 3px solid black;
   padding: 0.5rem;
 }
 
 .checkbox-wrapper:hover {
-  border: 3px solid white;
+  border: 3px solid black;
   padding: 0.5rem;
 }
 

@@ -29,8 +29,6 @@ const submit = async function( event ) {
 
   const data = await response.json()
 
-  console.log( "text:", data )
-
   //clear inputs
   name.value = ''
   year.value = ''
@@ -54,8 +52,6 @@ const deleteRow = async function( rowId ) {
   
   const body = JSON.stringify( json )
 
-  console.log("deleting: ", body)
-
   const response = await fetch( "/remove", {
     method:"POST",
     headers: {
@@ -65,8 +61,6 @@ const deleteRow = async function( rowId ) {
   })
 
   const data = await response.json()
-
-  console.log( "text:", data )
 
   seeResults()
 }
@@ -171,12 +165,9 @@ const submitEdits = async function ( ) {
     body = JSON.stringify( newData )
   }
   else {
-    console.log("no previous data found")
     return;
   }
         
-  console.log("updating: ", body)
-
   const response = await fetch( "/update", {
     method:"POST",
     headers: {
@@ -186,8 +177,6 @@ const submitEdits = async function ( ) {
   })
 
   const data = await response.json()
-
-  console.log( "text:", data )
 
   clearEditing()
 
@@ -206,8 +195,6 @@ const seeResults = async function ( event ) {
   })
 
   const data = await response.json()
-
-  console.log( "text2:", data )
 
   if(data.length === 0) {
     const tableBody = document.getElementById("movie-table-body");
@@ -252,8 +239,6 @@ const getSessionData = async function () {
 
     const data = await response.json()
 
-    console.log("data: ", data)
-
     if(data.isNewUser === true) {
       const newUserMessage = document.getElementById("new-user-message")
       newUserMessage.textContent = "New account created!"
@@ -265,9 +250,8 @@ const getSessionData = async function () {
     welcomeMessage.style.display = 'block';
   }
   catch (e) {
-    console.error(e)
     const message = document.getElementById("error-message")
-    message.textContent = "Login Error."
+    message.textContent = "Login Error. Please log back in."
     message.style.display = 'block';
   }
 }

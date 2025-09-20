@@ -1,27 +1,23 @@
-
-<!-- https://dev.to/m_josh/build-a-jwt-login-and-logout-system-using-expressjs-nodejs-hd2 -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>CS4241 Assignment 2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home page of movie reviewer. Here a user can enter movie ratings and view, edit, and delete previous ratings made by them.">
 
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
     
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> -->
   </head>
   <body>
     <div class="welcome-messages">
       <p id="new-user-message" class="has-text-primary has-text-weight-extrabold" style="display: none;"> </p>
       <p id="welcome-message" class="has-text-primary has-text-weight-extrabold" style="display: none;"> </p>
-      <p id="error-message" class="has-text-danger has-text-weight-extrabold" style="display: none;"> </p>
+      <p id="error-message" class="has-text-danger-60 has-text-weight-extrabold" style="display: none;"> </p>
     </div>
     <div class="tracker-container">
       <div class="left-boxes">
@@ -32,7 +28,7 @@
             <p class="card-header-title">Movie Rating Entry</p>
             <form class="form-inputs" id="inputForm">
               <div class="form-inputs">
-                <label for="name">Enter your movie name here: </label>
+                <label for="name">Enter your movie title here: </label>
                 <!-- <textarea class="textarea is-primary" placeholder="Movie Name" id="name" required
                 ></textarea> -->
                 <input class="input is-primary is-small" type="text" id="name" placeholder="Movie Name" required>
