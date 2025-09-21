@@ -60,7 +60,7 @@ For every label I used for input/checkbox elements in my html, I used a "for" at
 
 - Developing: "Use mark-up to convey meaning and structure"
 
-I used HTML semantic tags and role labels on divs to better convey functionality and meaning of different parts of the application. I used section elements to identify structure within groups, namely the heading sections, table sections, and form sections of groups. Additionally, I used section elements to identify the headings, or heros, at the top of each page. I also tagged some divs with roles if the divs encompassed custom functionality, such as the div checkbox wrapper I used or the hero headings. 
+I used HTML semantic tags and role labels on divs to better convey functionality and meaning of different parts of the application. I used section elements to identify structure within groups, namely the heading sections, table sections, and form sections of groups. Additionally, I used section elements to identify the headings, or heros, at the top of each page. I also tagged some divs with roles if the divs encompassed custom functionality, such as the hero headings. 
 
 - Developing: "Reflect the reading order in the code order"
 
