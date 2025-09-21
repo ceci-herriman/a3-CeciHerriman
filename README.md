@@ -13,6 +13,9 @@ Include a very brief summary of your project here. Images are encouraged, along 
 
 ## Technical Achievements
 - **Tech Achievement 1**: I achieved 100 on all four lighthouse tests.
+
+To achieve 100 on accesibility, I had to make changes to font colors and modify select element roles. To achieve 100 on performance, I had to adjust how my css style sheets and javascript files were being sent to the client, since I am using a large CSS framework (and font awesome for the login page). I put the "defer" tag on my javascript script tags to stop my script from blocking page rendering. I also made specific css style sheets non-blocking so that it can be loaded asyncronously. I had to be cognizant of which I put as non-blocking as it affects page element movement while loading. 
+
 - adjusting font colors, robots.txt, removing console logs, refactoring css code to reduce size
 
 ### Design/Evaluation Achievements
