@@ -12,7 +12,8 @@ Include a very brief summary of your project here. Images are encouraged, along 
 - a list of Express middleware packages you used and a short (one sentence) summary of what each one does. If you use a custom function, please add a little more detail about what it does.
 
 ## Technical Achievements
-- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
+- **Tech Achievement 1**: I achieved 100 on all four lighthouse tests.
+- adjusting font colors, robots.txt, removing console logs, refactoring css code to reduce size
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative:
