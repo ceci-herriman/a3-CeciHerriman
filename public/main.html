@@ -9,23 +9,7 @@
     <script src="js/main.js" defer></script>
 
     <style> 
-        body {
-  /* background:rgb(137, 188, 133); */
-  color:white;
-  font-size: 25px;
-
-  font-family: "Nunito", sans-serif; 
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.main-container {
-  margin: 15px;
-
-}
-
-.welcome-messages {
+        .welcome-messages {
   display: flex;  /* Overarching container organizes messages in rows */
   flex-direction: row;
   align-items: flex-start;
@@ -79,61 +63,7 @@
   padding: 25px;
 }
 
-button:focus, input:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border: 3px solid black !important;   
-}
-
-button:hover, input:hover {
-  border: 3px solid black !important;   
-}
-
-.input::placeholder {
-  color: rgb(75, 74, 74);
-  opacity: 1;
-}
-
-.card {
-  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.6),
-              0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-input {
-  display: table-cell; /* for better behavior in tables */
-  margin-bottom: 20px;
-}
-
-.number-input {
-  min-width: 100px;
-}
-
-table {
-  border-collapse: separate; /* Make each table cell have their own border so that we can apply spacing to them */
-  border-spacing: 20px 15px;
-}
-
-td {
-  word-wrap: break-word;     /* Break long strings and wrap for better spacing in cells with movie names*/
-  white-space: normal;
-  overflow-wrap: break-word;
-  max-width: 200px;
-
-  vertical-align: middle;
-}
-
-td.number-cell {
-  text-align: center;
-}
-
-th {
-  color:rgba(22, 109, 45, 0.79);
-}
     </style>
-
-
-    <link rel="preload" as="style" href="css/main.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
 
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"></noscript>
