@@ -4,7 +4,6 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = `mongodb+srv://${process.env.USERNM}:${process.env.PASS}@${process.env.HOST}/?retryWrites=true&w=majority&appName=Cluster0`;
 
 const express = require( 'express' ),
-      cookie  = require( 'cookie-session' ),
       session = require( 'express-session')
       app = express()
 
