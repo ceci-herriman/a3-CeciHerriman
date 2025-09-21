@@ -117,18 +117,16 @@ app.post('/login', async (req, res) => {
 
 app.get('/userDetails', (req, res) => {
   if (req.session.login) {
-    
     const details = {
       username: req.session.username,
       isNewUser: req.session.isNewUser || false
     }
 
-    console.log("session: ", details)
-
     res.json(details)
   }
   else {
-    res.status(401).json({ error: 'Not logged in' })
+    console.log("user not logged in!")
+    res.status(401).json({ error: 'Not logged in' });
   }
 })
 

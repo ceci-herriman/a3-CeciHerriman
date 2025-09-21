@@ -237,6 +237,14 @@ const getSessionData = async function () {
     method:'GET', 
     })
 
+
+    if (!response.ok) {
+      const errorData = await response.json(); // Optional: parse error message
+      throw new Error(errorData.error || "Login required");
+    }
+
+          console.log('session da', response)
+
     const data = await response.json()
 
     if(data.isNewUser === true) {
@@ -251,6 +259,7 @@ const getSessionData = async function () {
   }
   catch (e) {
     const message = document.getElementById("error-message")
+    console.log(e)
     message.textContent = "Login Error. Please log back in."
     message.style.display = 'block';
   }

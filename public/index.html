@@ -8,6 +8,7 @@
     to log in and view the main movie rating page holding their ratings.">
 
     <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
@@ -15,14 +16,21 @@
   </head>
   
   <body>
+    <section class="hero is-small is-primary" role="hero-banner">
+      <div class="hero-body">
+        <p class="title">Log In Page</p>
+        <p class="subtitle">Movie Reviewer</p>
+      </div>
+    </section>
+    <section>
     <div class="login-container">
     <h1 class="title is-1">Log In</h1>
     <div class="login-form"> 
       <form id="login-form" action='/login' method='POST'>
         <div class="field">
-          <label class="label is-medium">Username</label>
+          <label for="login-username" class="label is-medium">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-primary is-medium" type="text" placeholder="Username" name="username">
+            <input class="input is-primary is-medium" type="text" placeholder="Username" name="username" id="login-username">
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -30,9 +38,9 @@
         </div>
 
         <div class="field">
-          <label class="label is-medium">Password</label>
+          <label for="login-password" class="label is-medium">Password</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-primary is-medium" type="password" placeholder="Password" name="password">
+            <input class="input is-primary is-medium" type="password" placeholder="Password" name="password" id="login-password">
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -40,15 +48,15 @@
         </div>
 
         <div class="field">
-          <div class="control checkbox-wrapper">
-            <label class="checkbox is-medium">
-              <input class="is-medium" type="checkbox" name="doCreateUser">
+          <div class="control checkbox-wrapper" role="checkbox">
+            <label for="login-createUser" class="checkbox is-medium">
+              <input class="is-medium" type="checkbox" name="doCreateUser" id="login-createUser">
               Create new user if not existing
             </label>
           </div>
         </div>
 
-        <p id="error-message" class="has-text-danger" style="display: none;"> </p>
+        <p id="error-message" class="has-text-danger-60" style="display: none;"> </p>
 
         <div class="field" style="margin-top: 50px;">
           <div class="control">
@@ -59,5 +67,6 @@
       </form>    
     </div>
     </div>
+    </section>
   </body>
 </html>
