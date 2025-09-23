@@ -196,7 +196,11 @@ app.post( '/update', async (req,res) => {
 
 run().catch(console.dir)
 
-app.listen( process.env.PORT || 3000)
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 const addDerivedField = function( data ) {
   let total = data["plotRating"] + data["actingRating"] + data["musicRating"]
