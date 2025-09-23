@@ -2,6 +2,10 @@
 
 My application link: https://a3-ceciherriman.onrender.com/
 
+Premade user login: 
+- username: c
+- password: c
+
 The goal of this application is to support movie-watchers in keeping track of what movies they have watched in the past and what they thought of them. They can enter, delete, edit, and view movie reviews they have made, facilitating reflection on movie experiences and discourse with others. The application uses MongoDB to store user data and review data, Bulma for a CSS framework, and Express for middleware. Users can log in through a log in page and can create a new account by inputting their desired username and password and checking the "Create new user if not existing" checkbox. Users will then automatically be taken to the main page with a welcome message and new user alert if applicable. 
 
 The biggest challenges I faced when working on this project centered around the server development with Express. Using express definitely served as a learning curve as a lot of the operations and functionality is abstracted out. Developing the endpoints and querying the database wasn't very hard, however understanding how files were served and how the order of app.use() calls mattered was very hard. I struggled with disallowing users from accessing paths until they had logged in while still allowing for them to access /login. I ended up creating an array of public paths and adding middleware to only allow requests to those paths or requests from logged in users. I also struggled with handling authentication on the server side. I had to look through documentation to understand how sessions on servers worked with express, and how I could utilize req.session to implement the logic I wanted. I learned that I could store fields within the session and access those throughout the server, which I used to check if users were logged in, display usernames, and store user ids for database queries. Another big challenge I had was sending data back to the frontend to display when a login error occurred. I solved this problem by returning index.html wth specific error parameter values that communicated what went wrong on the server. Then, on the client side, I used the received value to determine what to print on the frontend. 
@@ -27,6 +31,13 @@ Screenshots of 100s results from running lighthouse through devTools and PageSpe
 ![alt text](<Screenshot 2025-09-21 at 4.18.06 PM.png>)
 ![alt text](<Screenshot 2025-09-21 at 4.40.43 PM.png>)
 ![alt text](<Screenshot 2025-09-21 at 4.41.09 PM.png>)
+
+- **Tech Achievement 2**: I hosted my site on Railway in addition to Render
+
+URL: https://a3-ceciherriman-production.up.railway.app/
+
+Railway seems faster to use overall. It automatically deploys when you push, and that overall process is definitely faster than that of Render's. It has a cool feature where you can see all of the build, deploy, and HTTP logs, which I found useful during my deployment process and also afterwards. It would also definitely be a big benefit for troubleshooting issues on your hosted app. The actual process of creating a project and configuring settings was much smoother than Render, as the service does a lot of inference behind the scenes as opposed to Render where you had to still fill out config fields. One thing that Railway does not do as well as Render is provide an intuitive user interface for new users. I had a to click around a lot just to find my deployment URL, which I ended up having to generate. For example, there are multiple settings pages that you can access from the same location, and their "architecture" page design is (still) confusing. Additionally, one other downside of Railway versus Render is that Railway has a 30 day / $5 credit trial plan, and then you must upgrade. However, from what I can tell, Railway does not take awhile to re-boot deployments after they haven't been in use for several minutes, it is always up and running. 
+
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative:
